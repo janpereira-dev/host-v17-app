@@ -1,4 +1,4 @@
 {
-    "remoteV12App": "http://localhost:4201/remoteEntry.js",
-    "remoteV19App": "http://localhost:4202/remoteEntry.js"
+    "remoteV12App": "https://remotev12app.netlify.app/remoteEntry.js",
+    "remoteV19App": "https://remotev19app.netlify.app/remoteEntry.js"
   }

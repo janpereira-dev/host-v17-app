@@ -15,7 +15,7 @@ export const routes: Routes = [
     component: WebComponentWrapper,
     data: {
       type: 'script',
-      remoteEntry: 'http://localhost:4201/remoteEntry.js',
+      remoteEntry: 'https://remotev12app.netlify.app/remoteEntry.js',
       remoteName: 'remoteV12App',
       exposedModule: './VentasWebComponent',
       elementName: 'remote-v12-ventas',
@@ -25,9 +25,8 @@ export const routes: Routes = [
     path: 'grid19',
     component: WebComponentWrapper,
     data: {
-      // Remote Angular 19 usa container ESM -> cargar como módulo (no script global)
       type: 'module',
-      remoteEntry: 'http://localhost:4202/remoteEntry.js',
+      remoteEntry: 'https://remotev19app.netlify.app/remoteEntry.js',
       exposedModule: './GridWebComponent',
       elementName: 'remote-v19-grid',
     } as WebComponentWrapperOptions,

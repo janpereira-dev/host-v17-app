@@ -1,7 +1,12 @@
 <mat-toolbar color="primary">
   <span>host-v17</span>
   <span class="spacer"></span>
-  <button mat-button routerLink="/">Home</button>
-  <button mat-button routerLink="/ventas">Ventas (v12)</button>
-  <button mat-button routerLink="/grid19">Grid (v19)</button>
+  <button mat-button routerLink="/" perfRouterLink>Home</button>
+  <button mat-button routerLink="/ventas" perfRouterLink>Ventas (v12)</button>
+  <button mat-button routerLink="/grid19" perfRouterLink>Grid (v19)</button>
+  <span class="spacer"></span>
+  <!-- Indicador de tiempo de carga -->
+  <span [matTooltip]="'Tiempo de navegación total y carga de MFE si aplica'">
+    {{ label() || '' }}
+  </span>
 </mat-toolbar>

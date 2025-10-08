@@ -24,6 +24,14 @@ export class HomeComponent {
     'bootstrap',
     '@angular-architects/module-federation',
     '@angular-architects/module-federation-tools',
+    'tslib',
+    'typescript',
+    'webpack',
+    'webpack-cli',
+    'webpack-dev-server',
+    'ag-grid-community',
+    'ag-grid-angular',
+    'ag-grid-enterprise',
   ];
 
   angularVersion = computed(
