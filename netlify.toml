@@ -1,0 +1,6 @@
+[build]
+  command = "npm i && npm run build"
+  publish = "dist/remote-v12-app"
+  [build.environment]
+    NODE_VERSION = "16.20.2"
+    NPM_FLAGS = "--no-audit --no-fund"
