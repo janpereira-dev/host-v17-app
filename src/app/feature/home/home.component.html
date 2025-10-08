@@ -1,0 +1,25 @@
+<section class="hero">
+  <div class="glow"></div>
+  <div class="card">
+    <h1>
+      <span class="badge">Angular v17 Host</span>
+    </h1>
+    <p class="subtitle">Estás en un host de Angular v17 ✨</p>
+
+    <div class="versions">
+      <h2>Versiones del proyecto</h2>
+      <div class="grid">
+        @for (lib of libs(); track lib.name) {
+          <div class="pill">
+            <span class="name">{{ lib.name }}</span>
+            <span class="ver">{{ lib.version }}</span>
+          </div>
+        }
+      </div>
+    </div>
+
+    <footer>
+      <span class="sparkle">Mucho brillo activado ✨💫</span>
+    </footer>
+  </div>
+</section>
