@@ -25,9 +25,9 @@ export const routes: Routes = [
     path: 'grid19',
     component: WebComponentWrapper,
     data: {
+      // Remote Angular 19 usa container ESM -> cargar como módulo (no script global)
       type: 'module',
       remoteEntry: 'http://localhost:4202/remoteEntry.js',
-      remoteName: 'remoteV19App',
       exposedModule: './GridWebComponent',
       elementName: 'remote-v19-grid',
     } as WebComponentWrapperOptions,
