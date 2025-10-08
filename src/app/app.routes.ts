@@ -12,7 +12,7 @@ export const routes: Routes = [
       type: 'script',
       remoteEntry: 'http://localhost:4201/remoteEntry.js',
       remoteName: 'remoteV12App',
-      exposedModule: './VentasModule',
+      exposedModule: './VentasWebComponent',
       elementName: 'remote-v12-ventas',
     } as WebComponentWrapperOptions,
   },
