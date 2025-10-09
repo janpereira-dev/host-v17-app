@@ -1,5 +1,5 @@
 [build]
-  command = "npm i && npm run build"
+  command = "npm i && cp prod/app.routes.ts src/app/app.routes.ts && cp prod/module-federation.manifest.json module-federation.manifest.json && npm run build"
   publish = "dist/host-v17-app"
   [build.environment]
     NODE_VERSION = "18.20.8"
