@@ -3,7 +3,6 @@ import {
   WebComponentWrapper,
   WebComponentWrapperOptions,
 } from '@angular-architects/module-federation-tools';
-import { loadRemoteModule } from '@angular-architects/module-federation';
 
 export const routes: Routes = [
   {
@@ -34,11 +33,12 @@ export const routes: Routes = [
   },
   {
     path: 'saitama',
-    loadComponent: () =>
-      loadRemoteModule({
-        type: 'module',
-        remoteEntry: 'http://localhost:4203/remoteEntry.js',
-        exposedModule: './SaitamaComponent',
-      }).then((m) => m.SaitamaComponent),
+    component: WebComponentWrapper,
+    data: {
+      type: 'module',
+      remoteEntry: 'http://localhost:4203/remoteEntry.js',
+      exposedModule: './SaitamaElement',
+      elementName: 'remote-v17-saitama',
+    } as WebComponentWrapperOptions,
   },
 ];

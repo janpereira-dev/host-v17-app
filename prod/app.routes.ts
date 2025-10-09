@@ -31,4 +31,14 @@ export const routes: Routes = [
       elementName: 'remote-v19-grid',
     } as WebComponentWrapperOptions,
   },
+  {
+    path: 'saitama',
+    component: WebComponentWrapper,
+    data: {
+      type: 'module',
+      remoteEntry: 'https://remotev17app.netlify.app/remoteEntry.js',
+      exposedModule: './SaitamaElement',
+      elementName: 'remote-v17-saitama',
+    } as WebComponentWrapperOptions,
+  },
 ];

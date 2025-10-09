@@ -1,4 +1,5 @@
 {
     "remoteV12App": "http://localhost:4201/remoteEntry.js",
-    "remoteV19App": "http://localhost:4202/remoteEntry.js"
+    "remoteV19App": "http://localhost:4202/remoteEntry.js",
+    "remoteV17App": "http://localhost:4203/remoteEntry.js"
   }
