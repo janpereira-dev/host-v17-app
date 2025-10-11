@@ -10,4 +10,9 @@
   <span [matTooltip]="'Tiempo de navegación total y carga de MFE si aplica'">
     {{ label() || '' }}
   </span>
+  <span class="spacer"></span>
+  <ng-container *ngIf="(isAuthenticated$ | async) as auth">
+    <button *ngIf="!auth.isAuthenticated" mat-button (click)="login()">Login</button>
+    <button *ngIf="auth.isAuthenticated" mat-button (click)="logout()">Logout</button>
+  </ng-container>
 </mat-toolbar>

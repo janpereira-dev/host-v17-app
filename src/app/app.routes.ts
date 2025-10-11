@@ -3,15 +3,28 @@ import {
   WebComponentWrapper,
   WebComponentWrapperOptions,
 } from '@angular-architects/module-federation-tools';
+import { AutoLoginPartialRoutesGuard } from 'angular-auth-oidc-client';
+import { AuthCallbackComponent } from './shared/auth/auth-callback.component';
+import { UnauthorizedComponent } from './shared/auth/unauthorized.component';
 
 export const routes: Routes = [
   {
+    path: 'callback',
+    component: AuthCallbackComponent,
+  },
+  {
+    path: 'unauthorized',
+    component: UnauthorizedComponent,
+  },
+  {
     path: '',
+    canActivate: [AutoLoginPartialRoutesGuard],
     loadComponent: () =>
       import('./feature/home/home.component').then((m) => m.HomeComponent),
   },
   {
     path: 'ventas',
+    canActivate: [AutoLoginPartialRoutesGuard],
     component: WebComponentWrapper,
     data: {
       type: 'script',
@@ -23,6 +36,7 @@ export const routes: Routes = [
   },
   {
     path: 'grid19',
+    canActivate: [AutoLoginPartialRoutesGuard],
     component: WebComponentWrapper,
     data: {
       type: 'module',
@@ -33,6 +47,7 @@ export const routes: Routes = [
   },
   {
     path: 'saitama',
+    canActivate: [AutoLoginPartialRoutesGuard],
     component: WebComponentWrapper,
     data: {
       type: 'module',
@@ -41,4 +56,6 @@ export const routes: Routes = [
       elementName: 'remote-v17-saitama',
     } as WebComponentWrapperOptions,
   },
+  // Callback route for OIDC if you want to handle it explicitly (optional)
+  // { path: 'callback', canActivate: [AutoLoginAllRoutesGuard], component: EmptyComponent }
 ];
